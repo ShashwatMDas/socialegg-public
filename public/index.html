@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./sg.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2665a4" />
+    <meta
+      name="description"
+      content="Stay in touch with your favourite topics, from sources you trust"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="news, news aggregator, wsj, nyt, world, social-media, aggregator, email, subscription, social, egg, social egg, socialegg">
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+<!-- 
+    <link rel="stylesheet" type="text/css" href="./aths/style/addtohomescreen.css">
+    <script src="./aths/src/addtohomescreen.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- <script>
+
+
+      $(document).ready(() => {
+
+        if(
+          (("standalone" in window.navigator) && !window.navigator.standalone)
+          ||
+          (!window.matchMedia('(display-mode: standalone)').matches)
+        ){
+          addToHomescreen();
+          console.log("yes");
+        }
+        else{
+          console.log("no");
+        }
+      })
+    </script> -->
+
+
+    <!-- Tell the browser it's a PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Tell iOS it's a PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="canonical" href="/"/>
+
+    <!-- One signal -->
+    
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> 
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <!-- <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+      <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: "b489920a-dcc3-4e13-a4f1-978e03d96d56",
+            notifyButton: {
+              enable: true,
+            },
+          });
+        });
+
+        OneSignal.push(() => {
+          OneSignal.getUserId().then(id => {
+            // console.log(id);
+            sessionStorage.setItem("NotifId", id);
+            // console.log(sessionStorage.getItem("NotifId"));
+          }).catch(err => {
+            console.log(err);
+          })
+        })
+
+        
+
+      </script> -->
+    <script>
+      // var OneSignal = window.OneSignal || [];
+      // OneSignal.push(function() {
+      //   OneSignal.init({
+      //     appId: "a9f4715a-24e1-437d-b116-9e3c132e9364",
+      //     notifyButton: {
+      //       enable: true,
+      //     },
+      //   });
+      //   OneSignal.getUserId().then(id => {
+      //     console.log(id);
+      //   }).catch(err => {
+      //     console.log(err);
+      //   })
+      // });
+    </script>
+   
+    <title>Social EGG</title>
+  </head>
+  <body style='font-size: 19px; background:#2e2e2e; color: #e3e3e3;'>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+     <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('worker.js').then(function(registration) {
+            // console.log('Worker registration successful', registration.scope);
+          }, function(err) {
+            // console.log('Worker registration failed', err);
+          }).catch(function(err) {
+            // console.log(err);
+          });
+        });
+      } else {
+        // console.log('Service Worker is not supported by browser.');
+      }
+    </script>
+     <noscript>Your browser does not support JavaScript!</noscript>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <style>
+
+      html, body {
+          max-width: 100%;
+          overflow-x: hidden;
+      }
+      .MuiFormLabel-root.Mui-focused {
+          color: #e3e3e3;
+          
+      }
+      .MuiFormLabel-root{
+          color: #e3e3e3;
+          
+      }
+      .MuiOutlinedInput-notchedOutline{
+        border-color: #e3e3e3 !important;
+        
+      }
+      .MuiList-root{
+        background: #2e2e2e;
+        color: #e3e3e3;
+        
+      }
+      .MuiSvgIcon-root{
+        color: #e3e3e3;
+        
+      }
+      .MuiInput-underline:after{
+        border-bottom:2px solid #e3e3e3 !important;
+        
+      }
+      .MuiInput-underline:before{
+        border-bottom:2px solid #e3e3e3 !important;
+        
+      }
+      .MuiInputBase-input{
+        color: #e3e3e3;
+        
+      }
+      .MuiOutlinedInput-input{
+        color: #e3e3e3;
+      }
+      @media (min-width: 200px){
+.makeStyles-title-4{
+    display: block;
+}
+@media (max-width: 800px) {
+.navbarimage{
+    padding-left: 31px !important;
+}
+}
+.makeStyles-title-3{
+  display: block;
+}
+      }
+      .MuiChip-colorPrimary{
+        background-color:#0065A4 !important;
+      }
+      .MuiDrawer-paperAnchorLeft {
+        background-color:#2e2e2e !important;
+      }
+      .MuiCard-root{
+        background-color: rgb(69,69,69);
+      }
+      .MuiTypography-displayBlock{
+        color: #e3e3e3;
+      }
+      .MuiTypography-colorTextSecondary{
+        color: #e3e3e3;
+      }
+      .MuiCardHeader-content{
+        text-align: right;
+      }
+      .makeStyles-avatar-6{
+        background-color:#0065A4 !important;
+      }
+      .MuiSelect-select.MuiSelect-select{
+        background-color: rgb(69,69,69);
+      }
+    </style>
+  </body>
+</html>
